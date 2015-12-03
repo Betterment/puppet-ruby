@@ -9,6 +9,7 @@ Requires the following boxen modules:
 * `autoconf` (some ruby versions)
 * `openssl` (ruby versions >= 2.0.0)
 * `gcc` (ruby versions <= 1.8.7)
+* `openssl`
 * [ripienaar/puppet-module-data](https://github.com/ripienaar/puppet-module-data)
 
 ## About

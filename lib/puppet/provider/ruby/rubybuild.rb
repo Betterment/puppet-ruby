@@ -63,7 +63,7 @@ private
   end
 
   def build_ruby
-    execute "#{ruby_build} #{version} #{prefix}", command_options.merge(:failonfail => true)
+    execute "#{ruby_build} #{version} #{prefix} --with-openssl-dir=#{Facter.value(:homebrew_root)}/opt/openssl", command_options.merge(:failonfail => true)
   end
 
   def tmp
@@ -119,7 +119,7 @@ private
       :combine            => true,
       :custom_environment => environment,
       :uid                => @resource[:user],
-      :failonfail         => true,
+      :failonfail         => true
     }
   end
 

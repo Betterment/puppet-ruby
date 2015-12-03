@@ -66,6 +66,9 @@ define ruby::version(
       ruby_build  => "${ruby::build::prefix}/bin/ruby-build",
       user        => $ruby::user,
       provider    => rubybuild,
+      require     => [
+        Package['openssl']
+      ]
     }
 
   }
